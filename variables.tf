@@ -4,7 +4,7 @@ variable "env_file" {
     default = "devfile.txt"
     description = "it's an environment file"
     validation {
-        condition = true
+        condition = len(var.env_file) > 0
         error_message = "Error message if validation fails"
     }
     sensitive = false
@@ -12,7 +12,7 @@ variable "env_file" {
 
 variable "source_file" {
     type = string
-    default = "devfile.txt"
+    default = "sourcefile.txt"
     description = "it's an environment file"
     validation {
         condition = true
