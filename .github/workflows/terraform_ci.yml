@@ -26,6 +26,11 @@ jobs:
       - name: checkout terraform repo
         uses: actions/checkout@v4
 
+      - name: Setup terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.7.0
+
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
@@ -42,7 +47,3 @@ jobs:
 
       - name: Run terraform plan
         run: terraform plan
-
-
-      
-      
