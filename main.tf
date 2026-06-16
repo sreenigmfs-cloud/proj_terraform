@@ -14,3 +14,4 @@ resource "local_file" "source" {
   filename = var.source_file
   content  = "this is source file"
 }
+
